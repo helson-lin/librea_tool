@@ -1,0 +1,7 @@
+node_modules/**
+dist
+.vscode/*
+xt-linux
+xt-win
+xt-macos
+prod

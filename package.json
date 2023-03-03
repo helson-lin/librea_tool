@@ -1,0 +1,45 @@
+{
+  "name": "xt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "bin": "dist/index.js",
+  "scripts": {
+    "link": "tsc && npm link",
+    "dev": "nodemon",
+    "build": "tsc",
+    "lint": "eslint --ext .js,.ts",
+    "pkg": "pkg . -t --debug --out-path=release",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "pkg": {
+    "scripts": [
+      "dist/*.js",
+      "dist/**/*.js"
+    ],
+    "assets": [],
+    "output": "pkg"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "@types/request": "^2.48.8",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.20",
+    "@types/crypto-js": "^4.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "request": "^2.88.2"
+  }
+}
