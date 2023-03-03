@@ -24,8 +24,8 @@ export const translate = (
     keyword: string,
     lang: 'ru' | 'auto' | 'en' | 'zh-CHS'
 ): Promise<string> => {
-    const appKey = '3b63d5ea9fc4d497';
-    const key = 'qS2FO1vb4OaY0cik2Q7JFK2g9gNscyiJ'; //注意：暴露appSecret，有被盗用造成损失的风险/^[A-Za-z0-9]+$/
+    const appKey = process.env.YD_APPKEY;
+    const key = process.env.YD_APPSECRET; //注意：暴露appSecret，有被盗用造成损失的风险
     const salt = new Date().getTime();
     const curtime = Math.round(new Date().getTime() / 1000);
     const str = appKey + truncate(keyword) + salt + curtime + key;
